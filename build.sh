@@ -9,7 +9,7 @@ SECONDS=0
 DATE=$(date '+%Y%m%d-%H%M')
 
 # Device
-DEVICE="${1:-agate}"
+DEVICE="pissarro"
 DEFCONFIG="${DEVICE}_defconfig"
 ZIPNAME="HydrogenKernel-${DEVICE}-${DATE}.zip"
 
@@ -28,7 +28,7 @@ export PATH="$TC_DIR/bin:$PATH"
 
 # Process options
 CLEAN_BUILD=false
-INCLUDE_KSU=false
+INCLUDE_KSU=true
 for arg in "$@"; do
     case $arg in
         -c) CLEAN_BUILD=true ;;
